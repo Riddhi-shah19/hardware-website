@@ -1,0 +1,446 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* font-size: 10px;(we want) */
+  /* 10px/16px(default)=0.625=62.5% */
+  /* percentage of user's browser font-size setting */
+  font-size: 62.5%;
+  overflow-x: hidden;
+  /* does not work on safari */
+  /* scroll-behavior: smooth; */
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  color: #555;
+  /* only works if there is nothing absolutely positioned in relation to body */
+  overflow-x: hidden;
+}
+
+/* header */
+
+.header {
+  height: 12rem;
+  width: 100%;
+  background-color: rgb(255, 127, 127);
+  display: flex;
+  padding: 0 4rem;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 10rem;
+}
+
+.center-logo {
+  align-items: center;
+}
+
+.main-nav {
+  font-size: 2.4rem;
+}
+
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  text-decoration: none;
+  font-weight: 500;
+  color: #fff;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  text-decoration: underline;
+}
+
+/* Mobile */
+
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #eee;
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
+
+/* slider */
+
+/* .carousel-btn {
+  width: 4rem;
+  border: 0;
+  position: absolute;
+  color: #fff;
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s ease-in-out;
+  padding: 5px;
+} */
+
+/* slideshow */
+#slideshow {
+  height: 68rem;
+  width: 100%;
+}
+
+#slideshow img {
+  height: 68rem;
+  width: 100%;
+}
+/* about us */
+
+.container {
+  padding: 6.6rem 6rem;
+}
+
+.heading-secondery {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 100;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.about-us-content {
+  margin-top: 4rem;
+  font-size: 1.8rem;
+  color: #777;
+  text-align: left;
+  padding: 0 4rem;
+  letter-spacing: 0.8px;
+  line-height: 2.4rem;
+}
+
+.abt-us-img {
+  margin-top: 4rem;
+}
+
+/* services */
+.grid {
+  display: grid;
+  column-gap: 6rem;
+  justify-items: center;
+}
+
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.section-services {
+  background-color: #7ca2c4;
+}
+
+.heading-secondery.service,
+.heading-secondery.test {
+  color: #fff;
+  font-size: 4.8rem;
+}
+
+.services {
+  margin-top: 4rem;
+  padding: 1.2rem 0;
+  border-radius: 1rem;
+  justify-items: center;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  background: #e9f0f5;
+  box-shadow: 1px 1px 4px 0 rgba(255, 255, 255, 0.4);
+}
+
+.service-img {
+  height: 20rem;
+  width: 90%;
+  border-radius: 1rem;
+}
+
+.service-list {
+  align-items: center;
+}
+
+.service-content {
+  text-align: center;
+  font-size: 1.4rem;
+  padding: 0 2rem;
+}
+
+/* testimonials */
+.carousel {
+  position: relative;
+  height: 40rem;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.carousel-track {
+  list-style: none;
+  position: relative;
+  padding: 4rem 2rem;
+  height: 100%;
+  transition: transform 25ms ease-in;
+}
+
+.carousel-track-container {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.heading-tertiary {
+  color: #222;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.testimonial-section p {
+  text-align: center;
+  font-size: 2rem;
+  color: #e9f0f5;
+}
+
+.testimonial-section {
+  background-color: #222;
+}
+
+.carousel-slide {
+  position: absolute;
+  width: 100%;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  color: #eee;
+  transform: translateY(-50%);
+  width: 4rem;
+  border: 0;
+  cursor: pointer;
+}
+
+.carousel-img {
+  display: block;
+  height: 10rem;
+  margin: auto;
+  border-radius: 50%;
+}
+
+.carousel-track h2 {
+  color: #7ca2c4;
+  font-size: 2rem;
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.carousel-track p {
+  font-size: 1.8rem;
+  width: 80%;
+  margin: auto;
+}
+
+.carousel-nav {
+  justify-content: center;
+  display: flex;
+  padding: 10px 0;
+}
+
+.carousel-indicator {
+  border: 0;
+  border-radius: 50%;
+  width: 1.4rem;
+  border: 1px solid #eee;
+  height: 1.4rem;
+  margin: 0 1.2rem;
+  background: #eee;
+  cursor: pointer;
+}
+
+.carousel-btn--left {
+  left: 4rem;
+}
+
+.carousel-btn--right {
+  right: 4rem;
+}
+
+.carousel-indicator.current-slide {
+  background: #7ca2c4;
+}
+
+.is--hidden {
+  display: none;
+}
+
+/* contact us */
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.contact-us-text {
+  font-size: 2.6rem;
+  margin: 2rem 0;
+}
+
+.contact-us-form label {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+  display: block;
+}
+
+.contact-us-form input,
+.contact-us-form select,
+textarea {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  margin-bottom: 1.6rem;
+  font-family: inherit;
+  border: none;
+  outline: none;
+  border-radius: 9px;
+  background-color: #e8e5e2;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.contact-us-form input::placeholder,
+textarea::placeholder {
+  color: #aaa;
+}
+
+.flex-name {
+  display: flex;
+  gap: 1rem;
+}
+
+.contact-us-img img {
+  display: block;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  border: none;
+  outline: none;
+  background-color: #444;
+  color: #eee;
+  cursor: pointer;
+  width: 12rem;
+  font-size: 2rem;
+}
+
+hr {
+  margin-bottom: 2rem;
+  width: 10rem;
+}
+
+/* footer */
+.grid--3-cols {
+  grid-template-columns: 1fr 1fr 1.5fr;
+  margin: 4rem;
+  padding: 4rem 4rem 0 4rem;
+}
+
+.footer-nav-list {
+  list-style: none;
+  font-size: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.footer-section {
+  border-top: 1px solid #eee;
+  background: #333;
+}
+
+.footer {
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.address-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  padding-right: 12rem;
+}
+
+.address-col h2 {
+  font-size: 4.8rem;
+}
+
+.address-col h3 {
+  font-size: 2.8rem;
+}
+
+.icon {
+  height: 2rem;
+  width: 2rem;
+}
+
+.location {
+  margin-top: 2rem;
+  display: flex;
+}
+
+.footer-nav-link,
+.footer-nav-link a {
+  font-size: 1.8rem;
+  padding: 0 1rem;
+  line-height: 2rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-heading {
+  font-size: 2.8rem;
+  font-weight: bold;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+}
+
+.footer-nav-link:hover a,
+.footer-nav-link:active a {
+  text-decoration: underline;
+}
+
+.sub-footer {
+  font-size: 1.2rem;
+  background-color: #222;
+  padding: 2rem 4rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sub-footer a {
+  text-decoration: none;
+  color: rgb(0, 208, 255);
+}

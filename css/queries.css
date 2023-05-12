@@ -1,0 +1,113 @@
+@media (max-width: 59em) {
+  html {
+    font-size: 50%;
+  }
+
+  .about-us-content {
+    padding: 0;
+  }
+
+  .grid {
+    column-gap: 2rem;
+  }
+
+  .grid--4-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .services {
+    width: 80%;
+  }
+
+  .address-col {
+    padding-right: 0;
+  }
+
+  /* Mobile navigation */
+
+  .btn-mobile-nav {
+    display: block;
+    z-index: 9999;
+  }
+
+  .main-nav {
+    background-color: rgba(0, 0, 0, 0.565);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100vh;
+    transform: translateX(100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    font-size: 4rem;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    gap: 6rem;
+  }
+
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(98%);
+  }
+
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+}
+
+@media (max-width: 44em) {
+  .grid--2-cols {
+    grid-template-columns: none;
+    gap: 2rem;
+  }
+
+  .about-us-content {
+    text-align: center;
+  }
+
+  .contact-us-form {
+    width: 80%;
+  }
+
+  .grid--3-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 44em) {
+  .container {
+    padding: 6.6rem 2rem;
+  }
+
+  .grid--4-cols {
+    grid-template-columns: none;
+  }
+
+  .grid--3-cols {
+    grid-template-columns: none;
+    gap: 1.4rem;
+    justify-items: left;
+  }
+
+  .social-links {
+    text-align: left;
+  }
+
+  .about-us-content {
+    text-align: left;
+  }
+}
