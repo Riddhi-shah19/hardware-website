@@ -15,7 +15,7 @@ html {
 }
 
 body {
-  font-family: "Rubik", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
   line-height: 1;
   color: #555;
@@ -28,7 +28,7 @@ body {
 .header {
   height: 12rem;
   width: 100%;
-  background-color: rgb(255, 127, 127);
+  background-color: #28398f;
   display: flex;
   padding: 0 4rem;
   position: relative;
@@ -37,15 +37,11 @@ body {
 }
 
 .logo {
-  height: 10rem;
-}
-
-.center-logo {
-  align-items: center;
+  height: 14rem;
 }
 
 .main-nav {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
 }
 
 .main-nav-list {
@@ -65,6 +61,21 @@ body {
 .main-nav-link:hover,
 .main-nav-link:active {
   text-decoration: underline;
+}
+
+/* sticky nav */
+.sticky .header{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  height:12rem;
+padding-top: 0;
+padding-bottom: 0;
+z-index:999;
+}
+
+.sticky .slideshow-container{
+  margin-top: 9.6rem;
 }
 
 /* Mobile */
@@ -102,26 +113,45 @@ body {
 
 /* slideshow */
 #slideshow {
-  height: 68rem;
+  height: 60rem;
   width: 100%;
+  position: relative;
 }
 
 #slideshow img {
-  height: 68rem;
+  height: 60rem;
   width: 100%;
 }
+
+.overlay{
+  position: absolute;
+  background: rgba(57, 57, 57, 0.6);
+  /* To center */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inset: 0;
+}
+
+.tagline{
+  color: #eee;
+  font-size: 4.6rem;
+  text-align: center;
+}
+
 /* about us */
 
 .container {
-  padding: 6.6rem 6rem;
+  padding: 8rem 6rem;
 }
 
 .heading-secondery {
   text-align: center;
   font-size: 4rem;
-  font-weight: 100;
+  font-weight: 400;
   margin-bottom: 2rem;
   color: #333;
+  font-family: "Roboto";
 }
 
 .about-us-content {
@@ -130,12 +160,14 @@ body {
   color: #777;
   text-align: left;
   padding: 0 4rem;
-  letter-spacing: 0.8px;
+  letter-spacing: -0.4px;
   line-height: 2.4rem;
 }
 
 .abt-us-img {
   margin-top: 4rem;
+  height:100%;
+  width: 100%;
 }
 
 /* services */
@@ -150,13 +182,15 @@ body {
 }
 
 .section-services {
-  background-color: #7ca2c4;
+  background-color: #28398fe6;
 }
 
 .heading-secondery.service,
 .heading-secondery.test {
   color: #fff;
   font-size: 4.8rem;
+  font-family: "Roboto";
+  font-weight: 400;
 }
 
 .services {
@@ -166,9 +200,10 @@ body {
   justify-items: center;
   display: flex;
   gap: 1rem;
+  height: fit-content;
   flex-direction: column;
   align-items: center;
-  background: #e9f0f5;
+  background: #c4ddf9;
   box-shadow: 1px 1px 4px 0 rgba(255, 255, 255, 0.4);
 }
 
@@ -188,10 +223,23 @@ body {
   padding: 0 2rem;
 }
 
+.read-more-text{
+  display:none;
+}
+
+.show{
+  display: inline !important;
+}
+
+.read-more{
+  color: rgb(0, 85, 255);
+  cursor: pointer;
+}
+
 /* testimonials */
 .carousel {
   position: relative;
-  height: 40rem;
+  height: 38rem;
   width: 80%;
   margin: 0 auto;
 }
@@ -219,7 +267,7 @@ body {
 .testimonial-section p {
   text-align: center;
   font-size: 2rem;
-  color: #e9f0f5;
+  color:#b0d2f7;
 }
 
 .testimonial-section {
@@ -249,7 +297,7 @@ body {
 }
 
 .carousel-track h2 {
-  color: #7ca2c4;
+  color: #61a5f0;
   font-size: 2rem;
   margin: 1.5rem 0;
   text-align: center;
@@ -265,6 +313,7 @@ body {
   justify-content: center;
   display: flex;
   padding: 10px 0;
+  margin-top: 1rem;
 }
 
 .carousel-indicator {
@@ -287,7 +336,7 @@ body {
 }
 
 .carousel-indicator.current-slide {
-  background: #7ca2c4;
+  background: #28398fec;
 }
 
 .is--hidden {
@@ -364,8 +413,8 @@ hr {
 /* footer */
 .grid--3-cols {
   grid-template-columns: 1fr 1fr 1.5fr;
-  margin: 4rem;
-  padding: 4rem 4rem 0 4rem;
+  padding: 2rem 4rem ;
+
 }
 
 .footer-nav-list {
@@ -386,15 +435,18 @@ hr {
   margin-bottom: 0;
 }
 
+.footer-logo{
+  height: 18rem;
+  width: 18rem;
+}
+
 .address-col {
   display: flex;
   flex-direction: column;
-  gap: 1.4rem;
-  padding-right: 12rem;
 }
 
-.address-col h2 {
-  font-size: 4.8rem;
+.social-links,.shop-details{
+  padding: 4.8rem 4rem 0 4rem;
 }
 
 .address-col h3 {
@@ -418,6 +470,7 @@ hr {
   line-height: 2rem;
   color: #fff;
   text-decoration: none;
+ text-transform: lowercase;
 }
 
 .footer-heading {
@@ -443,4 +496,8 @@ hr {
 .sub-footer a {
   text-decoration: none;
   color: rgb(0, 208, 255);
+}
+
+#services,#contact-us{
+  scroll-margin-top: 12rem;
 }

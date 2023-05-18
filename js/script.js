@@ -74,6 +74,23 @@ dotsNav.addEventListener("click", (e) => {
   hideshowArrows(slides, prevButton, nextButton, targetIndex);
 });
 
+//sticky nav
+const sectionHero=document.querySelector(".slideshow-container");
+const obs=new IntersectionObserver(
+  function(entries){
+    const ent=entries[0];
+    if(ent.isIntersecting===false)document.body.classList.add("sticky");
+    if (ent.isIntersecting)document.body.classList.remove("sticky");
+  },
+  {
+    root:null,
+    threshold:0,
+    rootMargin:"-80px",
+  }
+);
+obs.observe(sectionHero);
+
+
 //make mobile navigation work
 const btnNav = document.querySelector(".btn-mobile-nav");
 const header = document.querySelector(".header");
@@ -90,13 +107,13 @@ yearEl.textContent = currentYear;
 //slideshow
 
 function first() {
-  document.getElementById("slideimage").src = "img/Cloud-computing.png";
+  document.getElementById("slideimage").src = "img/repair1.jpg";
 }
 function second() {
-  document.getElementById("slideimage").src = "img/computer-hardware.jpg";
+  document.getElementById("slideimage").src = "img/repair2.jpg";
 }
 function third() {
-  document.getElementById("slideimage").src = "img/network-server.jpg";
+  document.getElementById("slideimage").src = "img/repair3.jpg";
 }
 
 setInterval(first, 2000);
@@ -113,16 +130,32 @@ allLinks.forEach(function (link) {
     const href = link.getAttribute("href");
     //scroll back to top
     if (href == "#")
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
+     
+     window.scroll({
+      top: 0, 
+      left: 0, 
+      behavior: 'smooth'
+    });
     //scroll to other links
     if (href !== "#" && href.startsWith("#")) {
       const sectionEl = document.querySelector(href);
-      sectionEl.scrollIntoView({ behavior: "smooth" });
-    } else {
+      sectionEl.scrollIntoView({ behavior:"smooth"});
+    }
+
+    if(href!=="#" && !href.startsWith("#")){
       window.open(link);
     }
   });
 });
+
+//read more
+const readMore=document.getElementsByClassName('read-more');
+const onClick=(event)=>{
+  const button=event.target;
+  const dataTarget=button.getAttribute('data-target');
+  const extracontent=document.getElementById(dataTarget);
+button.innerHTML=button.innerHTML==='show less'?'show more':'show less';
+extracontent.classList.toggle('show');
+}
+const attachingEvent=e=>e.addEventListener('click',onClick);
+Array.prototype.forEach.call(readMore,attachingEvent);

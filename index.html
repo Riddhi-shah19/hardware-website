@@ -4,22 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/queries.css" />
+    <link rel="icon" href="img/logo.png">
     <script defer src="js/script.js"></script>
     <title>CS COMPUTERS</title>
   </head>
   <body>
+
     <header class="header">
-      <a class="center-logo" href="#">
+      <a href="#">
         <img class="logo" alt="cs logo" src="img/logo.png" />
       </a>
       <nav class="main-nav">
@@ -34,7 +34,7 @@
             <a class="main-nav-link" href="#services">Services</a>
           </li>
           <li>
-            <a class="main-nav-link" href="#contact-us">Contat Us</a>
+            <a class="main-nav-link" href="#contact-us">Contact Us</a>
           </li>
         </ul>
       </nav>
@@ -46,7 +46,10 @@
     <main>
       <section class="slideshow-container">
         <div id="slideshow">
-          <img src="img/Cloud-computing.png" id="slideimage" />
+          <img src="img/repair1.jpg" id="slideimage" />
+       <div class="overlay">
+        <h1 class="tagline">Giving Futures To Your Tech</h1>
+       </div>
         </div>
       </section>
 
@@ -83,13 +86,13 @@
             Provider”.</strong
           >
         </div>
-        <img class="abt-us-img" alt="office" src="">
+        <img class="abt-us-img" alt="office" src="img/repair4.jpg">
         </div>
       </section>
 
       <section class="section-services container" id="services">
         <div>
-          <h2 class="heading-secondery service">SERVICES</h2>
+          <h2 class="heading-secondery service">OUR SERVICES</h2>
         </div>
         <div class="grid grid--4-cols">
           <div class="services">
@@ -103,10 +106,11 @@
               As security has been a major concern of the IT industry, C S
               COMPUTERS has come up with solutions that can fight all threats.
               Our focus is to maximize the network performance, integrate
-              technologies and deliver cost-effective solutions. C S COMPUTERS,S
+              technologies and deliver cost-effective solutions. <span id="firstTarget" class="read-more-text">C S COMPUTERS,S
               solutions encompass an array of client’s needs right from
               strategic planning, hardware and software solution to
-              web-application hosting and network management
+              web-application hosting and network management.</span>
+              <span class="read-more" data-target="firstTarget"> Read more...</span>
             </p>
           </div>
           <div class="services">
@@ -116,9 +120,10 @@
               At c s computers, coupled with robust performances we provide
               flexibility and reliable stability in our networking services. Our
               aim is to deliver simple yet consistent solutions which are
-              flexible and can be molded as per client requirements. We deliver
+              flexible and can be molded as per client requirements.<span id="secondTarget" class="read-more-text"> We deliver
               secure and scalable IP network that can be custom-made based on
-              the varying business needs
+              the varying business needs.</span>
+              <span class="read-more" data-target="secondTarget"> Read more...</span>
             </p>
           </div>
           <div class="services">
@@ -132,8 +137,9 @@
               Over the years, c s computer& Teams laying the cable in industries
               hospitals Government sectors& as per Client Requirement we are
               laying All types of Network cable telephone cable Fiber optic
-              cable and many more
-            </p>
+              cable and many more 
+              <span class="read-more" data-target="third-target"> Read more...</span>
+            </p>  
           </div>
           <div class="services">
             <img class="service-img" alt="cctv camera" src="img/cctv.jpeg" />
@@ -142,10 +148,11 @@
               Our years of experiences have helped us reach a wide number of
               clients all across the globe. Cctv security system solution is
               exclusively designed to meet your company’s needs. We Install and
-              maintain cctv security systems for both medium and small companies
+              maintain <span id="forthTarget" class="read-more-text">cctv security systems for both medium and small companies
               and big Institutions as well. To meet your business needs we
-              design the best security system.
-            </p>
+              design the best security system.</span>
+              <span class="read-more" data-target="forthTarget"> Read more...</span>
+            </p> 
           </div>
         </div>
       </section>
@@ -343,7 +350,6 @@
               <label for="email">Email address</label>
               <input
                 id="email"
-                ,
                 type="email"
                 name="email"
                 placeholder="Enter your mail address"
@@ -378,7 +384,9 @@
       <div class="footer">
         <div class="grid grid--3-cols">
           <div class="address-col">
-            <h2>C S COMPUTERS</h2>
+            <a href="#">
+              <img class="footer-logo" alt="cs logo" src="img/logo.png" />
+            </a>
             <h3>RAJ SHUKLA</h3>
           </div>
           <div class="social-links">
@@ -393,7 +401,7 @@
               </li>
             </ul>
           </div>
-          <div>
+          <div class="shop-details">
             <div class="location">
               <svg
                 class="icon"
@@ -414,6 +422,7 @@
                 >9574215912, 0265-6999950</a
               >
             </div>
+            
             <div class="location">
               <svg
                 class="icon"
@@ -464,9 +473,9 @@
         </div>
         <div class="sub-footer">
           <p class="copyright">
-            coyright &copy; <span class="year">2027</span> by C S computers, Inc All Rights Reserved.
+            coyright &copy; <span class="year">2027</span> by C S Computers, Inc All Rights Reserved.
           </p>
-          <p>site developed by<a class="year" href="https://mamotechnolabs.com/"> MAMO TECHNOLABS LLP</a></P>
+          <p>Site Developed by<a class="year" href="https://mamotechnolabs.com/"> MAMO TECHNOLABS LLP</a></P>
         </div>
       </div>
     </footer>
