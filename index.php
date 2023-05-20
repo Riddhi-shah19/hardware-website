@@ -1,3 +1,8 @@
+ <?php
+include("database.php");
+echo '<script defer src="js/script.js"></script>'
+?> 
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -148,7 +153,7 @@
               Our years of experiences have helped us reach a wide number of
               clients all across the globe. Cctv security system solution is
               exclusively designed to meet your company’s needs. We Install and
-              maintain <span id="forthTarget" class="read-more-text">cctv security systems for both medium and small companies
+              maintain cctv security systems for<span id="forthTarget" class="read-more-text"> both medium and small companies
               and big Institutions as well. To meet your business needs we
               design the best security system.</span>
               <span class="read-more" data-target="forthTarget"> Read more...</span>
@@ -157,191 +162,25 @@
         </div>
       </section>
 
-      <section class="testimonial-section container">
-        <div class="carousel">
-           <button class="carousel-btn carousel-btn--left is--hidden">
-            <!-- <svg
-              class="carousel-btn"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-6 h-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M15.75 19.5L8.25 12l7.5-7.5"
-              />
-            </svg> -->
-          </button> 
-            <div class="carousel-track-container">
-               <div class="heading-secondery test">TESTIMONIALS</div>
-               <p>see what people are saying</p>
-            <ul class="carousel-track">
-              <li class="carousel-slide current-slide">
-                <img class="carousel-img" alt="person1" src="img/customer-1.jpg" />
-                <h2>Ayesha</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-                soluta ullam, quibusdam totam obcaecati ipsum omnis delectus
-                enim! Quidem dolorum vel sunt, itaque quisquam rem? Commodi
-                assumenda consequuntur repellat quae.
-              </p>
-              </li>
-              <li class="carousel-slide">        
-               <img class="carousel-img" alt="image-2" src="img/customer-2.jpg" />
-               <h2>Jatin</h2>
-               <p>
-                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-                 soluta ullam, quibusdam totam obcaecati ipsum omnis delectus
-                 enim! Quidem dolorum vel sunt, itaque quisquam rem? Commodi
-                 assumenda consequuntur repellat quae.
-               </p>
-              </li>
-              <li class="carousel-slide">
-                <img class="carousel-img" alt="person3" src="img/customer-3.jpg" />
-                <h2>Lara</h2>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-                  soluta ullam, quibusdam totam obcaecati ipsum omnis delectus
-                  enim! Quidem dolorum vel sunt, itaque quisquam rem? Commodi
-                  assumenda consequuntur repellat quae.
-                </p>
-              </li>
-            </ul>
-          </div> 
-           <button class="carousel-btn carousel-btn--right">
-            <!-- <svg
-              class="carousel-btn"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-6 h-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M8.25 4.5l7.5 7.5-7.5 7.5"
-              />
-            </svg> -->
-          </div>
-        </button>
-         <div class="carousel-nav">
-          <button class="carousel-indicator current-slide"></button>
-          <button class="carousel-indicator"></button>
-          <button class="carousel-indicator"></button>
-        </div>
-          </section>
-      <!-- <section class="testimonial-section container" id="testimonial-section">
-        <div class="heading-secondery test">TESTIMONIALS</div>
-        <p>see what people are saying</p>
-        <div class="wrap">
-          <span>
-            <svg
-              class="arrow-btn right"
-              id="right-arrow"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-6 h-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M8.25 4.5l7.5 7.5-7.5 7.5"
-              />
-            </svg>
-          </span>
-          <span>
-            <svg
-              id="left-arrow"
-              class="arrow-btn left"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-6 h-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M15.75 19.5L8.25 12l7.5-7.5"
-              />
-            </svg>
-          </span>
-
-          <div id="testimonials">
-            <div class="active">
-              <div class="test-img">
-                <img alt="person1" src="img/customer-1.jpg" />
-              </div>
-              <h2>Ayesha</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-                soluta ullam, quibusdam totam obcaecati ipsum omnis delectus
-                enim! Quidem dolorum vel sunt, itaque quisquam rem? Commodi
-                assumenda consequuntur repellat quae.
-              </p>
-            </div>
-            <div>
-              <div class="test-img">
-                <img alt="person2" src="img/customer-2.jpg" />
-              </div>
-              <h2>Jatin</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-                soluta ullam, quibusdam totam obcaecati ipsum omnis delectus
-                enim! Quidem dolorum vel sunt, itaque quisquam rem? Commodi
-                assumenda consequuntur repellat quae.
-              </p>
-            </div>
-            <div>
-              <div class="test-img">
-                <img alt="person3" src="img/customer-3.jpg" />
-              </div>
-              <h2>Lara</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-                soluta ullam, quibusdam totam obcaecati ipsum omnis delectus
-                enim! Quidem dolorum vel sunt, itaque quisquam rem? Commodi
-                assumenda consequuntur repellat quae.
-              </p>
-            </div>
-          </div>
-          <ul id="dots">
-            <li class="dot active"></li>
-            <li class="dot"></li>
-            <li class="dot"></li>
-          </ul>
-        </div>
-      </section> -->
-
       <section class="contact-us-section container" id="contact-us">
         <div class="heading-secondery">CONTACT US</div>
         <p class="contact-us-text">GET IN TOUCH</p>
         <hr />
         <div class="grid grid--2-cols">
-          <form class="contact-us-form" name="sign-up">
+          <form method="post" action="#contact-us" class="contact-us-form" name="sign-up">
             <label for="name">Full Name</label>
             <div class="flex-name">
               <input
                 id="name"
                 type="text"
-                name="name"
+                name="fname"
                 placeholder="Enter Your first Name"
                 required
               />
               <input
                 id="name"
                 type="text"
-                name="name"
+                name="lname"
                 placeholder="Enter Your Last Name"
                 required
               />
@@ -368,10 +207,10 @@
             </div>
             <div>
               <label for="message">Comment or Message </label>
-              <textarea placeholder="Enter your comment here" rows="5">
+              <textarea name="comment" placeholder="Enter your comment here" rows="5">
               </textarea>
             </div>
-            <button class="btn" href="#">SUBMIT</button>
+            <input type="submit" name="submit" class="btn" value="SUBMIT"/>
           </form>
           <div class="contact-us-img">
             <img alt="contact-us-img" src="img/contact-us.jpg" />
@@ -397,7 +236,7 @@
               </li>
               <li class="footer-nav-link"><a href="#services">SERVICES</a></li>
               <li class="footer-nav-link">
-                <a href="#contact-us">CONTACT US</a>
+                <a href="#contact-us">CONTACT US </a>
               </li>
             </ul>
           </div>
